@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: customers
+    description: This model represents the dimension table for customers.
+    columns:
+      - name: customer_sk
+        description: The surrogate key of the customer.
+        tests:
+          - unique
+          - not_null
+      - name: customerid
+        description: The natural key of the customer.
+        tests:
+          - not_null
+      - name: fullname
+        description: The customer name, adopted as customer_fullname when person name is not null.
+      - name: AddressId
+        description: The identifier for the customer's address.
+        tests:
+          - not_null
+      - name: AddressType
+        description: The type of address
+      - name: AddressLine1
+        description: The first of the customer's address.
+      - name: City
+        description: The city of the customer's address.
+      - name: StateProvince
+        description: The state or province of the customer's address.
+      - name: CountryRegion
+        description: The country or region of the customer's address.
+      - name: PostalCode
+        description: The postal code of the customer's address.
