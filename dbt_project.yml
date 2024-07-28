@@ -1,0 +1,15 @@
+name: 'data_dbt_spark'
+version: '1.0.0'
+config-version: 2
+
+profile: 'data_dbt_spark'
+
+model-paths: ["models"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  ecommerce_data_pipelines:
+    materialized: view
